@@ -94,3 +94,6 @@
 	prune = true
 [diff]
 	compactionHeuristic = true
+[user]
+	name = chrisdhanaraj
+	email = adhanaraj@gmail.com
