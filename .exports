@@ -8,9 +8,12 @@ export MANPAGER="less -X"
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # here's LS_COLORS
 # github.com/trapd00r/LS_COLORS
-command -v gdircolors >/dev/null 2>&1 || alias gdircolors="dircolors"
-eval "$(gdircolors -b ~/.dircolors)"
+# command -v gdircolors >/dev/null 2>&1 || alias gdircolors="dircolors"
+# eval "$(gdircolors -b ~/.dircolors)"
+
+export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATH
+export PREFIX=$HOME/n
+export N_PREFIX=$HOME/n
