@@ -62,8 +62,11 @@ chpwd_functions=( auto-ls $chpwd_functions )
 # z prof
 
 # export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# export PATH="$PATH:$HOME/.newt-cache/node-versions/n/versions/node/6.6.0/bin"
 
+source ~/.aliases
 source ~/.extra
 source ~/.exports
-source ~/.aliases
-# source ~/.functions
+source ~/.functions
+
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH="$PATH:$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).

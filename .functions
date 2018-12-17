@@ -142,6 +142,10 @@ camerausedby() {
 	echo -e "Recent camera uses:\n$usedby"
 }
 
+fstack() {
+  CURRENT_BRANCH=`git rev-parse --abbrev-ref HEAD`
+  newt ci start --param FEATURE_BRANCH=${CURRENT_BRANCH} feature
+}
 
 # animated gifs from any video
 # from alex sexton   gist.github.com/SlexAxton/4989674
@@ -169,10 +173,6 @@ webmify(){
 function nullify() {
   "$@" >/dev/null 2>&1
 }
-
-
-# visual studio code. a la `subl`
-function code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCodeInsiders" --args $*; }
 
 # `shellswitch [bash |zsh]`
 #   Must be in /etc/shells

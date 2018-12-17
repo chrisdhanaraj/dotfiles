@@ -97,3 +97,5 @@
 [user]
 	name = chrisdhanaraj
 	email = adhanaraj@gmail.com
+[mergetool]
+	keepBackup = false
