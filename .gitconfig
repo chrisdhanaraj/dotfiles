@@ -95,7 +95,7 @@
 [diff]
 	compactionHeuristic = true
 [user]
-	name = chrisdhanaraj
-	email = adhanaraj@gmail.com
+	name = Chris Dhanaraj
+	email = cdhanaraj@netflix.com
 [mergetool]
 	keepBackup = false

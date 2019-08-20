@@ -18,4 +18,5 @@ eval "$(gdircolors -b ~/.dircolors)"
 
 # Netflix
 
-export NETFLIX_STACK=testintg
+export NETFLIX_STACK=development
+export NETFLIX_ENVIRONMENT=test

@@ -12,10 +12,6 @@ source ~/code/antigen/antigen.zsh
 # ######################################################################
 # ### install some antigen bundles
 
-# # homebrew  - autocomplete on `brew install`
-antigen bundle brew
-antigen bundle brew-cask
-
 # # Tracks your most used directories, based on 'frecency'.
 antigen bundle robbyrussell/oh-my-zsh plugins/z
 
@@ -33,10 +29,6 @@ antigen bundle tarruda/zsh-autosuggestions
 
 # # colors for all files!
 antigen bundle trapd00r/zsh-syntax-highlighting-filetypes
-
-# # dont set a theme, because pure does it all
-antigen bundle mafredri/zsh-async
-antigen bundle sindresorhus/pure
 
 # Tell antigen that you're done.
 antigen apply
@@ -69,4 +61,10 @@ source ~/.extra
 source ~/.exports
 source ~/.functions
 
+autoload -U promptinit; promptinit
+prompt pure
+
+export PATH="$PATH:$HOME/flutter/bin"
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH="$PATH:$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
