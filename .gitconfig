@@ -12,6 +12,7 @@
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
 	reup = rebase-update # depot_tools specific
+	create-pull-request = !sh -c 'stash pull-request $0 $@'
 
 [core]
 	excludesfile = ~/.gitignore

@@ -147,6 +147,11 @@ fstack() {
   newt ci start --param FEATURE_BRANCH=${CURRENT_BRANCH} feature
 }
 
+pqfstack() {
+  CURRENT_BRANCH=`git rev-parse --abbrev-ref HEAD`
+  newt ci start --param API_ENV=alpha --param FEATURE_BRANCH=${CURRENT_BRANCH} feature
+}
+
 # animated gifs from any video
 # from alex sexton   gist.github.com/SlexAxton/4989674
 gifify() {

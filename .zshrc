@@ -64,7 +64,10 @@ source ~/.functions
 autoload -U promptinit; promptinit
 prompt pure
 
+export PATH="$PATH:$HOME/code/ngrok"
+export PATH="$PATH:$HOME/code/meego"
 export PATH="$PATH:$HOME/flutter/bin"
+export PATH="$PATH:$HOME/meego"
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH="$PATH:$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
