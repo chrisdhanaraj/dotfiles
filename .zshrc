@@ -18,9 +18,6 @@ antigen bundle robbyrussell/oh-my-zsh plugins/z
 # # nicoulaj's moar completion files for zsh -- not sure why disabled.
 antigen bundle zsh-users/zsh-completions src
 
-# # Syntax highlighting on the readline
-antigen bundle zsh-users/zsh-syntax-highlighting
-
 # history search
 antigen bundle zsh-users/zsh-history-substring-search ./zsh-history-substring-search.zsh
 
@@ -38,9 +35,9 @@ antigen apply
 
 
 # bind UP and DOWN arrow keys for history search
-zmodload zsh/terminfo
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
+# zmodload zsh/terminfo
+# bindkey "$terminfo[kcuu1]" history-substring-search-up
+# bindkey "$terminfo[kcud1]" history-substring-search-down
 
 # Automatically list directory contents on `cd`.
 auto-ls () {
@@ -57,17 +54,16 @@ chpwd_functions=( auto-ls $chpwd_functions )
 # export PATH="$PATH:$HOME/.newt-cache/node-versions/n/versions/node/6.6.0/bin"
 
 source ~/.aliases
-source ~/.extra
 source ~/.exports
 source ~/.functions
-
 autoload -U promptinit; promptinit
 prompt pure
 
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 export PATH="$PATH:$HOME/code/ngrok"
 export PATH="$PATH:$HOME/code/meego"
-export PATH="$PATH:$HOME/flutter/bin"
-export PATH="$PATH:$HOME/meego"
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH="$PATH:$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
